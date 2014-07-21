@@ -204,9 +204,9 @@ a:hover {
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-nav#my-nav {
+/*nav#my-nav {
   margin-right: 23.5%;
-}
+}*/
 .navbar .navbar-nav {
   float: none;
   margin: 10px 0;
@@ -494,12 +494,12 @@ nav#my-nav {
 #about .social-icons .icon-skype:hover {
   background: #df5757 url('../img/icon-skype-white.png') center center no-repeat;
 }
-/*#about .social-icons .icon-dribbble {
-  background: #ffffff url('../img/icon-dribbble-red.png') center center no-repeat;
+#about .social-icons .icon-github {
+  background: #ffffff url('../img/icon-github-red.png') center center no-repeat;
 }
-#about .social-icons .icon-dribbble:hover {
-  background: #df5757 url('../img/icon-dribbble-white.png') center center no-repeat;
-}*/
+#about .social-icons .icon-github:hover {
+  background: #df5757 url('../img/icon-github-white.png') center center no-repeat;
+}
 /* ==========================================================================
    Services Section
    ========================================================================== */
@@ -734,8 +734,8 @@ nav#my-nav {
 }
 #portfolio .portfolio-row .portfolio-mix .portfolio-item a h3 {
   font-size: 1.111111111111111em;
-  line-height: 1.2em;
-  margin-top:-51px;
+  line-height: 1.0em;
+  margin-top:-46px;
   font-weight: bold;
   color: #fff;
   position: absolute;
@@ -801,7 +801,7 @@ nav#my-nav {
 }
 #portfolio .portfolio-row .portfolio-mix .portfolio-item a:hover .portfolio-item-description {
   opacity: 1;
-  top: 42%;
+  top: 35%;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -2247,8 +2247,26 @@ nav#my-nav {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media (min-width: 432px) {
+/*  .da-dots span {
+    top: -221px;
+  }*/
+  #portfolio .portfolio-row .portfolio-mix .portfolio-item a:hover .portfolio-item-description {
+    opacity: 0;
+  }
+  #portfolio .portfolio-row .portfolio-mix .portfolio-item a .caption-bg {
+    width: 0%;
+  }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+/*  .container {
+    max-width: 605px;
+  }*/
+  .container > .navbar-header, .container > .navbar-collapse {
+    margin-right: 50px;
+  }
   .navbar .navbar-nav {
     float: right;
     margin: 2px 0 2px 0;
@@ -2269,6 +2287,10 @@ nav#my-nav {
     box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0);
     margin-top: 0;
   }
+/*
+  .da-dots span {
+    top: -221px !important;
+  }*/
   #about .round-outline {
     height: 100px;
     width: 100px;
@@ -2276,6 +2298,7 @@ nav#my-nav {
   #about .round-outline .round-photo-anchor img {
     margin: 0;
   }
+
   #portfolio .cat-list {
     text-align: center;
     list-style-type: none;
@@ -2286,8 +2309,11 @@ nav#my-nav {
     margin-bottom: 0;
     padding: 6px 20px;
   }
-  #testimonials .da-slider {
-    height: 320px;
+  #portfolio .portfolio-row .portfolio-mix .portfolio-item a:hover .portfolio-item-description {
+    opacity: 0;
+  }
+    #portfolio .portfolio-row .portfolio-mix .portfolio-item a .caption-bg {
+    width: 0%;
   }
   .da-arrows-prev {
     left: 30%;
@@ -2297,12 +2323,16 @@ nav#my-nav {
     right: 30%;
     background: transparent url('../img/arrow-right.png') no-repeat top left;
   }
+
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .navbar .navbar-nav {
     float: right;
     margin: 2px 0 2px 0;
+  }
+  nav#my-nav {
+  margin-right: 23.5%;
   }
   .navbar .navbar-nav li {
     margin-left: 5px;
@@ -2330,12 +2360,18 @@ nav#my-nav {
   #testimonials .da-slider {
     height: 300px;
   }
+/*#portfolio .portfolio-row .portfolio-mix .portfolio-item a:hover .portfolio-item-description {
+    opacity: 0;
+  }*/
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   #header {
     height: auto;
   }
+  nav#my-nav {
+  margin-right: 23.5%;
+}
   #testimonials .da-slider {
     height: 280px;
   }
